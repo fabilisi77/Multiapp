@@ -65,6 +65,7 @@ class ImcAppActivity : AppCompatActivity() {
     }
 
     private fun initUI(){
+        setGenderColor()
 
     }
 }

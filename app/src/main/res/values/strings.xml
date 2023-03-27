@@ -4,5 +4,6 @@
     <string name="female">MUJER</string>
     <string name="male_icon">Icono de Hombre</string>
     <string name="female_icon">Icono de Mujer</string>
+    <string name="altura">ALTURA</string>
 
 </resources>
