@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PrimeraApp</string>
+    <string name="male">HOMBRE</string>
+    <string name="female">MUJER</string>
+    <string name="male_icon">Icono de Hombre</string>
+    <string name="female_icon">Icono de Mujer</string>
+
 </resources>
