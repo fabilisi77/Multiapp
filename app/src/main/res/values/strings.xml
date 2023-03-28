@@ -8,5 +8,8 @@
     <string name="weigth">PESO</string>
     <string name="age">EDAD</string>
     <string name="Calculate">CALCULAR</string>
+    <string name="newCalculate">VOLVER A CALCULAR</string>
+    <string name="result">Tu Resultado</string>
+    <string name="error">Error</string>
 
 </resources>

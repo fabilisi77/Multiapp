@@ -1,5 +1,6 @@
 package com.example.primeraapp.imcCalculator
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -31,6 +32,10 @@ class ImcAppActivity : AppCompatActivity() {
     private lateinit var btnPlusAge: FloatingActionButton
     private lateinit var tvAge: TextView
     private lateinit var btnCalculate: Button
+
+    companion object {
+        const val IMC_KEY ="IMC_RESULT"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -91,20 +96,32 @@ class ImcAppActivity : AppCompatActivity() {
             currentAge += 1
         }
         btnCalculate.setOnClickListener {
-            calculateIMC()
+           val result = calculateIMC()
+            navigateToResult(result)
         }
     }
 
-    private fun calculateIMC () {
-        val imc = currentWeight/ (currentHeight.toDouble()/100 * currentHeight.toDouble()/100)
+    private fun navigateToResult(result: Double) {
+        val intent = Intent(this, ImcResultActivity::class.java)
+        intent.putExtra(IMC_KEY, result)
+        startActivity(intent)
 
     }
 
-    private fun setAge (){
+
+    private fun calculateIMC(): Double {
+        val df = DecimalFormat("#.##")
+        val imc = currentWeight / (currentHeight.toDouble() / 100 * currentHeight.toDouble() / 100)
+
+        return df.format(imc).toDouble()
+
+    }
+
+    private fun setAge() {
         tvAge.text = currentAge.toString()
     }
 
-    private fun setWeight (){
+    private fun setWeight() {
         tvWeight.text = currentWeight.toString()
     }
 
