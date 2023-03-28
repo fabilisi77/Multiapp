@@ -2,16 +2,35 @@ package com.example.primeraapp.imcCalculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.example.primeraapp.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.slider.Slider
+import java.text.DecimalFormat
 
 class ImcAppActivity : AppCompatActivity() {
 
     private var isMaleSelected: Boolean = true
+
+    /** acá no ponemos lateinit porque ya le estamos pasando un parámetro*/
     private var isFemaleSelected: Boolean = false
+    private var currentWeight: Int = 50
+    private var currentAge: Int = 25
+    private var currentHeight: Int = 120
     private lateinit var viewMale: CardView
     private lateinit var viewFemale: CardView
+    private lateinit var tvHeigth: TextView
+    private lateinit var rsHeigth: Slider
+    private lateinit var btnSubtractWeight: FloatingActionButton
+    private lateinit var btnPlusWeight: FloatingActionButton
+    private lateinit var tvWeight: TextView
+    private lateinit var btnSubtractAge: FloatingActionButton
+    private lateinit var btnPlusAge: FloatingActionButton
+    private lateinit var tvAge: TextView
+    private lateinit var btnCalculate: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,23 +41,74 @@ class ImcAppActivity : AppCompatActivity() {
         initUI()
 
     }
+
     private fun initComponents() {
         viewMale = findViewById(R.id.viewMale)
         viewFemale = findViewById(R.id.viewFemale)
+        tvHeigth = findViewById(R.id.tvHieght)
+        rsHeigth = findViewById(R.id.rsHeigth)
+        btnSubtractWeight = findViewById(R.id.btnSubtractWeigth)
+        btnPlusWeight = findViewById(R.id.btnPlusWeigth)
+        btnSubtractAge = findViewById(R.id.btnSubtractAge)
+        btnPlusAge = findViewById(R.id.btnPlusAge)
+        tvWeight = findViewById(R.id.tvWeight)
+        tvAge = findViewById(R.id.tvAge)
+        btnCalculate = findViewById(R.id.btnCalculate)
 
     }
 
     private fun initListeners() {
         viewMale.setOnClickListener {
             changeGender()
-            setGenderColor() }
+            setGenderColor()
+        }
         viewFemale.setOnClickListener {
             changeGender()
-            setGenderColor() }
+            setGenderColor()
+        }
+        rsHeigth.addOnChangeListener { _, value, _ ->
+            /**este Listener es de movimiento*/
+            val df = DecimalFormat("#.##")
+
+            /**acá le estamos diciendo que queremos que nos muestre un formato con un valor entero y dos decimales*/
+            currentHeight = df.format(value).toInt()
+            tvHeigth.text = "$currentHeight cm"
+        }
+        btnSubtractWeight.setOnClickListener {
+            setWeight()
+            currentWeight -= 1
+        }
+        btnPlusWeight.setOnClickListener {
+            setWeight()
+            currentWeight += 1
+        }
+        btnSubtractAge.setOnClickListener {
+            setAge()
+            currentAge -= 1
+        }
+        btnPlusAge.setOnClickListener {
+            setAge()
+            currentAge += 1
+        }
+        btnCalculate.setOnClickListener {
+            calculateIMC()
+        }
+    }
+
+    private fun calculateIMC () {
+        val imc = currentWeight/ (currentHeight.toDouble()/100 * currentHeight.toDouble()/100)
 
     }
 
-    private fun changeGender(){
+    private fun setAge (){
+        tvAge.text = currentAge.toString()
+    }
+
+    private fun setWeight (){
+        tvWeight.text = currentWeight.toString()
+    }
+
+    private fun changeGender() {
         isMaleSelected = !isMaleSelected
         isFemaleSelected = !isFemaleSelected
 
@@ -49,23 +119,24 @@ class ImcAppActivity : AppCompatActivity() {
 
     private fun setGenderColor() {
         viewMale.setCardBackgroundColor(getBackgroundColor(isMaleSelected))
-        viewFemale. setCardBackgroundColor(getBackgroundColor(isFemaleSelected))
+        viewFemale.setCardBackgroundColor(getBackgroundColor(isFemaleSelected))
 
 
     }
 
-    private fun getBackgroundColor(isSelectedComponent:Boolean): Int{
-        val colorReference = if (isSelectedComponent){
+    private fun getBackgroundColor(isSelectedComponent: Boolean): Int {
+        val colorReference = if (isSelectedComponent) {
             R.color.background_component_selected
-        }else{
+        } else {
             R.color.background_component
         }
-        return ContextCompat.getColor(this,colorReference)
+        return ContextCompat.getColor(this, colorReference)
 
     }
 
-    private fun initUI(){
+    private fun initUI() {
         setGenderColor()
+        setWeight()
 
     }
 }

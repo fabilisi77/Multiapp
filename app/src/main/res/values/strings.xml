@@ -5,5 +5,8 @@
     <string name="male_icon">Icono de Hombre</string>
     <string name="female_icon">Icono de Mujer</string>
     <string name="altura">ALTURA</string>
+    <string name="weigth">PESO</string>
+    <string name="age">EDAD</string>
+    <string name="Calculate">CALCULAR</string>
 
 </resources>
