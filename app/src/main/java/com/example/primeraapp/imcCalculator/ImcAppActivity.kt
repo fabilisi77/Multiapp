@@ -154,6 +154,7 @@ class ImcAppActivity : AppCompatActivity() {
     private fun initUI() {
         setGenderColor()
         setWeight()
+        setAge()
 
     }
 }

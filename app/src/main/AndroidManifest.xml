@@ -12,10 +12,11 @@
         android:theme="@style/Theme.PrimeraApp"
         tools:targetApi="31">
         <activity
-            android:name=".imcCalculator.ImcResultActivity"
+            android:name=".appTodo.AppTodoActivity"
+            android:theme="@style/Theme.TodoApp"
             android:exported="false" />
         <activity
-            android:name=".yamiActivity2"
+            android:name=".imcCalculator.ImcResultActivity"
             android:exported="false" />
         <activity
             android:name=".imcCalculator.ImcAppActivity"

@@ -116,7 +116,7 @@
                 android:textSize="35sp"
                 android:textStyle="bold" />
 
-            <com.google.android.material.slider.RangeSlider
+            <com.google.android.material.slider.Slider
                 android:id="@+id/rsHeigth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
