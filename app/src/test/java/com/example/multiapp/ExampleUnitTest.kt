@@ -1,4 +1,4 @@
-package com.example.primeraapp
+package com.example.multiapp
 
 import org.junit.Test
 

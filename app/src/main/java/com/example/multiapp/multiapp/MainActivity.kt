@@ -1,4 +1,4 @@
-package com.example.primeraapp
+package com.example.multiapp.multiapp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             val name = etName.text.toString()
 
             if (name.isNotEmpty()){
-                val intent = Intent(this,ResultActivity2::class.java)
+                val intent = Intent(this, ResultActivity2::class.java)
                 intent.putExtra("EXTRA_NAME", name)
                 startActivity(intent)
             }

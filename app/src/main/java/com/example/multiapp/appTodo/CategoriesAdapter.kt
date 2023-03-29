@@ -1,4 +1,4 @@
-package com.example.primeraapp.appTodo
+package com.example.multiapp.appTodo
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

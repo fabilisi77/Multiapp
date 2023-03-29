@@ -1,9 +1,9 @@
-package com.example.primeraapp.appTodo
+package com.example.multiapp.appTodo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
-import com.example.primeraapp.R
+import com.example.multiapp.R
 
 class AppTodoActivity : AppCompatActivity() {
     private lateinit var rvCategories: RecyclerView

@@ -1,12 +1,11 @@
-package com.example.primeraapp.imcCalculator
+package com.example.multiapp.imcCalculator
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import com.example.primeraapp.R
-import com.example.primeraapp.imcCalculator.ImcAppActivity.Companion.IMC_KEY
+import com.example.multiapp.R
+import com.example.multiapp.imcCalculator.ImcAppActivity.Companion.IMC_KEY
 
 class ImcResultActivity : AppCompatActivity() {
     private lateinit var tvResult: TextView

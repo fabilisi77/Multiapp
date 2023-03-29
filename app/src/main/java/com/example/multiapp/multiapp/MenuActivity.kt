@@ -1,11 +1,11 @@
-package com.example.primeraapp
+package com.example.multiapp.multiapp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.primeraapp.appTodo.AppTodoActivity
-import com.example.primeraapp.imcCalculator.ImcAppActivity
+import com.example.multiapp.appTodo.AppTodoActivity
+import com.example.multiapp.imcCalculator.ImcAppActivity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +30,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun navigateToSaludapp(){
-        val intent = Intent(this,MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
 
     }

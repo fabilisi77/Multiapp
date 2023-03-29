@@ -1,4 +1,4 @@
-package com.example.primeraapp.appTodo
+package com.example.multiapp.appTodo
 
 sealed class TaskCategory {
     object Personal:TaskCategory()

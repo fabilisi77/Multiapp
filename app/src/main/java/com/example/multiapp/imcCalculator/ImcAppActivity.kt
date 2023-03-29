@@ -1,4 +1,4 @@
-package com.example.primeraapp.imcCalculator
+package com.example.multiapp.imcCalculator
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
-import com.example.primeraapp.R
+import com.example.multiapp.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.Slider
 import java.text.DecimalFormat
