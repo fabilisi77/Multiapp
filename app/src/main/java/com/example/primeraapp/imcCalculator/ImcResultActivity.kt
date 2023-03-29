@@ -22,7 +22,12 @@ class ImcResultActivity : AppCompatActivity() {
         val result: Double = intent.extras?.getDouble(IMC_KEY) ?: -1.0
         initComponents()
         initUI(result)
+        initListener()
 
+    }
+
+    private fun initListener() {
+        btnNewCalculate.setOnClickListener { onBackPressed() }
     }
 
     private fun initUI(result: Double) {
@@ -30,21 +35,21 @@ class ImcResultActivity : AppCompatActivity() {
 
         when (result) {
             in 0.00..18.50 -> {
-                tvResult
-                tvDescription
+                tvResult.text = getString(R.string.title_bajo_peso)
+                tvDescription.text = getString(R.string.Description_bajo_peso)
             }
             in 18.51..24.99 -> {
-                tvResult
-                tvDescription
+                tvResult.text = getString(R.string.title_peso_normal)
+                tvDescription.text = getString(R.string.description_peso_normal)
             }
             in 25.00..29.99 -> {
-                tvResult
-                tvDescription
+                tvResult.text = getString(R.string.title_sobrepeso)
+                tvDescription.text = getString(R.string.description_sobrepeso)
 
             }
             in 30.00..99.00 -> {
-                tvResult
-                tvDescription
+                tvResult.text = getString(R.string.title_obesidad)
+                tvDescription.text = getString(R.string.description_obesidad)
             }
             else-> {
                 tvResult.text =getString(R.string.error)

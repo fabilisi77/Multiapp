@@ -15,6 +15,9 @@
             android:name=".imcCalculator.ImcResultActivity"
             android:exported="false" />
         <activity
+            android:name=".yamiActivity2"
+            android:exported="false" />
+        <activity
             android:name=".imcCalculator.ImcAppActivity"
             android:exported="false" />
         <activity

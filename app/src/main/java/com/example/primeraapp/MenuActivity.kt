@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.appcompat.widget.AppCompatButton
 import com.example.primeraapp.imcCalculator.ImcAppActivity
 
 class MenuActivity : AppCompatActivity() {
@@ -15,12 +14,14 @@ class MenuActivity : AppCompatActivity() {
         val saludapp = findViewById<Button>(R.id.btnSaludapp)
         val imcApp = findViewById<Button>(R.id.btnImcApp)
 
+
         saludapp.setOnClickListener {
             navigateToSaludapp()
         }
         imcApp.setOnClickListener {
             navigateToImcapp()
         }
+
     }
 
     private fun navigateToSaludapp(){
@@ -34,4 +35,6 @@ class MenuActivity : AppCompatActivity() {
         startActivity(intent)
 
     }
+
+
 }
