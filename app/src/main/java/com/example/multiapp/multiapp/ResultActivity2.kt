@@ -3,6 +3,7 @@ package com.example.multiapp.multiapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.primeraapp.R
 
 class ResultActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

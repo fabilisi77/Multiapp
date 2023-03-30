@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.multiapp.appTodo.AppTodoActivity
 import com.example.multiapp.imcCalculator.ImcAppActivity
+import com.example.primeraapp.R
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

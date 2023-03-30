@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import com.example.multiapp.R
 import com.example.multiapp.imcCalculator.ImcAppActivity.Companion.IMC_KEY
+import com.example.primeraapp.R
 
 class ImcResultActivity : AppCompatActivity() {
     private lateinit var tvResult: TextView
