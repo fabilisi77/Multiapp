@@ -13,17 +13,17 @@
         android:theme="@style/Theme.PrimeraApp"
         tools:targetApi="31">
         <activity
-            android:name=".appTodo.AppTodoActivity"
+            android:name="com.example.multiapp.appTodo.AppTodoActivity"
             android:theme="@style/Theme.TodoApp"
             android:exported="false" />
         <activity
-            android:name=".imcCalculator.ImcResultActivity"
+            android:name="com.example.multiapp.imcCalculator.ImcResultActivity"
             android:exported="false" />
         <activity
-            android:name=".imcCalculator.ImcAppActivity"
+            android:name="com.example.multiapp.imcCalculator.ImcAppActivity"
             android:exported="false" />
         <activity
-            android:name=".MenuActivity"
+            android:name="com.example.multiapp.multiapp.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ResultActivity2"
+            android:name="com.example.multiapp.multiapp.ResultActivity2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

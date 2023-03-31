@@ -24,5 +24,8 @@
 <!--TODOApp-->
     <string name="todo_welcome_message">Bienvenidos!☺☺☺</string>
     <string name="todo_categories">Categorías</string>
+    <string name="task">Tareas</string>
+
+
 
 </resources>

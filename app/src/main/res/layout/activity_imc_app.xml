@@ -7,7 +7,7 @@
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="32dp"
     android:background="@color/background_app"
-    tools:context=".imcCalculator.ImcAppActivity">
+    tools:context="com.example.multiapp.imcCalculator.ImcAppActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/viewMale"

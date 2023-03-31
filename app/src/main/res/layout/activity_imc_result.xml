@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_app"
     android:padding="16dp"
-    tools:context=".imcCalculator.ImcResultActivity">
+    tools:context="com.example.multiapp.imcCalculator.ImcResultActivity">
 
     <TextView
         android:id="@+id/tvTitle"
