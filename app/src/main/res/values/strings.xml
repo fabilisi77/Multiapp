@@ -25,6 +25,12 @@
     <string name="todo_welcome_message">Bienvenidos!☺☺☺</string>
     <string name="todo_categories">Categorías</string>
     <string name="task">Tareas</string>
+    <string name="todo_add_task">Añade la tarea</string>
+
+    <string name="todo_dialog_add_task_button">Crear Tarea</string>
+    <string name="todo_dialog_business">Negocios</string>
+    <string name="todo_dialog_Personal">Personal</string>
+    <string name="todo_dialog_other">Otros</string>
 
 
 
